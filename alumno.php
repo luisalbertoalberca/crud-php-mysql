@@ -13,7 +13,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.datatables.net/v/bs5/dt-2.2.2/datatables.min.css" rel="stylesheet" integrity="sha384-M6C9anzq7GcT0g1mv0hVorHndQDVZLVBkRVdRb2SsQT7evLamoeztr1ce+tvn+f2" crossorigin="anonymous">
         
     </head>
     <body>
@@ -34,7 +35,7 @@
                         </div>
 
                         <div class="col-md-8">
-                            <table class="table" >
+                            <table class="table-md-3" id="mitabla">
                                 <thead class="table-success table-striped" >
                                     <tr>
                                         <th>Codigo</th>
@@ -66,5 +67,17 @@
                         </div>
                     </div>  
             </div>
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="..." crossorigin="anonymous"></script>
+            <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-2.2.2/datatables.min.js" integrity="..." crossorigin="anonymous"></script>
+
+            <!-- Inicializa DataTables -->
+            <script>
+                var table = new DataTable('#mitabla', {
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/2.3.0/i18n/es-ES.json',
+                },
+            });
+            </script>
+
     </body>
 </html>
